@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malla Curricular Interactiva</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .semestre { margin-bottom: 20px; }
+    .curso { background: #f0f0f0; padding: 10px; margin: 5px 0; cursor: pointer; border-radius: 5px; }
+    .curso:hover { background: #d0e8ff; }
+    .descripcion { display: none; margin-top: 5px; font-size: 0.9em; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular - Ejemplo</h1>
+
+  <div class="semestre">
+    <h2>Semestre 1</h2>
+    <div class="curso" onclick="toggle(this)">
+      Matemáticas I
+      <div class="descripcion">Álgebra, funciones y límites.</div>
+    </div>
+    <div class="curso" onclick="toggle(this)">
+      Introducción a la Programación
+      <div class="descripcion">Fundamentos de algoritmos y programación en Python.</div>
+    </div>
+  </div>
+
+  <div class="semestre">
+    <h2>Semestre 2</h2>
+    <div class="curso" onclick="toggle(this)">
+      Física I
+      <div class="descripcion">Cinemática, dinámica y leyes de Newton.</div>
+    </div>
+    <div class="curso" onclick="toggle(this)">
+      Programación Orientada a Objetos
+      <div class="descripcion">Conceptos de clases, objetos, herencia y más.</div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(element) {
+      const desc = element.querySelector('.descripcion');
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
